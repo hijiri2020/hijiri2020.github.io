@@ -1,0 +1,77 @@
+/* noto-sans-jp-300 - japanese_latin */
+@font-face {
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Noto Sans Japanese Light'), local('NotoSansJapanese-Light'),
+        url('../fonts/noto-sans-jp-v24-japanese_latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/noto-sans-jp-v24-japanese_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* noto-sans-jp-regular - japanese_latin */
+@font-face {
+font-family: 'Noto Sans JP';
+font-style: normal;
+font-weight: 400;
+font-display: swap;
+src: local('Noto Sans Japanese Regular'), local('NotoSansJapanese-Regular'),
+    url('../fonts/noto-sans-jp-v24-japanese_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/noto-sans-jp-v24-japanese_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* Materialize custom */
+
+nav {
+    background-color: #FFF !important;
+    box-shadow: 0 10px 15px 0 rgba(0,0,0,0.15) !important;
+    -webkit-box-shadow: 0 10px 15px 0 rgba(0,0,0,0.15) !important;
+}
+
+nav i, nav a {
+    color: #888 !important;
+}
+
+@media (max-width: 990px) {
+    .tab {
+        width: 33.333% !important;
+    }
+}
+
+@media (min-width: 990px) {
+    .tab {
+        width: 200px !important;
+    }
+
+    .brand-logo {
+        margin-left: 100px;
+    }
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.tabs.tabs-transparent .indicator {
+    background-color: #888 !important;
+}
+
+.btn {
+    box-shadow: 0 0px 10px 5px rgba(0,0,0,0.1) !important;
+    -webkit-box-shadow: 0 0px 10px 5px rgba(0,0,0,0.1) !important;
+    border-radius: 30px !important;
+}
+
+/* オリジナル */
+.qr-button {
+    width: 100% !important;
+    height: 60px !important;
+}
+
+.stamp-container {
+    display: inline-block;
+}
+
+.stamp-container div {
+
+}

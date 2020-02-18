@@ -1,0 +1,206 @@
+/*
+    prefix: animation-*
+*/
+
+/* ==========================  LoadingBox  ========================== */
+
+.animation-loading {
+    --margin: 2.5%;
+    --animation-time: 0.4s;
+    --color: #82C8B4;
+}
+
+.animation-loading {
+    background-color: #313337;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.7s ease-in;
+    z-index: 99;
+}
+
+.animation-loading::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 10%;
+    top: -10%;
+    background-color: #313337;
+}
+
+.animation-loading-loaded {
+    animation-name: loaded;
+    animation-duration: 1s;
+    top: -100%;
+}
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+.animation-loading p {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 65vh;
+    color: var(--color);
+    font-size: 120%;
+}
+
+.animation-line {
+    position: absolute;
+    box-sizing: border-box;
+    border: 0px solid var(--color);
+    animation-duration: calc(var(--animation-time) * 4);
+    animation-iteration-count: infinite;
+}
+
+.animation-line:nth-of-type(odd) {
+    border-width: 5px 0 0 0;
+    width: 0%;
+}
+
+.animation-line:nth-of-type(even) {
+    border-width: 0 5px 0 0;
+    height: 0%;
+}
+
+.animation-line:nth-of-type(1) {
+    top: var(--margin);
+    left: var(--margin);
+    animation-name: lineAnimation-width-1;
+    transition: all var(--animation-time) ease-in;
+}
+
+.animation-line:nth-of-type(2) {
+    top: var(--margin);
+    right: var(--margin);
+    animation-name: lineAnimation-height-1;
+    transition: all var(--animation-time) ease-in;
+}
+
+.animation-line:nth-of-type(3) {
+    bottom: var(--margin);
+    left: var(--margin);
+    animation-name: lineAnimation-width-2;
+    transition: all var(--animation-time) ease-out;
+}
+
+.animation-line:nth-of-type(4) {
+    top: var(--margin);
+    left: var(--margin);
+    animation-name: lineAnimation-height-2;
+    transition: all var(--animation-time) ease-out;
+}
+
+@keyframes lineAnimation-width-1 {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: calc(100% - (var(--margin) * 2));
+    }
+
+    50% {
+        width: calc(100% - (var(--margin) * 2));
+        left: var(--margin);
+    }
+
+    75% {
+        width: 0%;
+        left: calc(100% - var(--margin));
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes lineAnimation-height-1 {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: calc(100% - (var(--margin) * 2));
+    }
+
+    75% {
+        height: calc(100% - (var(--margin) * 2));
+        top: var(--margin);
+    }
+
+    100% {
+        height: 0%;
+        top: calc(100% - var(--margin));
+    }
+}
+
+@keyframes lineAnimation-width-2 {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 0%;
+    }
+
+    50% {
+        width: calc(100% - (var(--margin) * 2));
+    }
+
+    75% {
+        width: calc(100% - (var(--margin) * 2));
+        left: var(--margin);
+    }
+
+    100% {
+        width: 0%;
+        left: calc(100% - var(--margin));
+    }
+}
+
+@keyframes lineAnimation-height-2 {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: calc(100% - (var(--margin) * 2));
+    }
+
+    50% {
+        height: calc(100% - (var(--margin) * 2));
+        top: var(--margin);
+    }
+
+    75% {
+        height: 0%;
+        top: calc(100% - var(--margin));
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+@keyframes loaded {
+    0% {
+        top: 0%;
+    }
+
+    25% {
+        top: 10%;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
