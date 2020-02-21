@@ -34,7 +34,7 @@ nav i, nav a {
 
 @media (max-width: 990px) {
     .tab {
-        width: 33.333% !important;
+        width: calc(100% / 3) !important;
     }
 }
 
@@ -62,16 +62,67 @@ nav i, nav a {
     border-radius: 30px !important;
 }
 
-/* オリジナル */
-.qr-button {
+.btn-flat {
+    margin-right: 15px !important;
+}
+
+.modal {
+    border-radius: 20px !important;
+}
+
+/* スタンプページ */
+.hj-stamp-qr-button {
     width: 100% !important;
     height: 60px !important;
 }
 
-.stamp-container {
+.hj-stamp-container {
     display: inline-block;
 }
 
-.stamp-container div {
+.hj-stamp-container div {
+    width: 40%;
+    box-shadow: 0 0px 10px 5px rgba(0,0,0,0.1) !important;
+    -webkit-box-shadow: 0 0px 10px 5px rgba(0,0,0,0.25) !important;
+    border-radius: 15px;
+}
 
+.hj-stamp-container div img {
+    width: 100%;
+}
+
+.hj-stamp-container div p {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.hj-title {
+	color: #444;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+}
+.hj-title:before, .hj-title:after {
+	content: "";
+	flex-grow: 1;
+	height: 1px;
+	background: #444;
+	display: block;
+}
+.hj-title:before {
+	margin-right: .4em;
+}
+.hj-title:after {
+	margin-left: .4em;
+}
+
+.hj-read-qr {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.hj-read-text {
+    width: 100%;
+    text-align: center;
 }

@@ -16,7 +16,7 @@ ___  ___  ___        ___  ___  ________  ___    _______  ________    _______  __
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>聖祭 2020</title>
+        <title>hijiri 2020</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
         <link type="text/css" href="css/animation.css" rel="stylesheet">
@@ -64,22 +64,26 @@ ___  ___  ___        ___  ___  ________  ___    _______  ________    _______  __
         </div>
         <div id="hijiri-stamp" class="container">
             <p style="width: 100%;text-align: center;height: 70px;">スタンプラリータイトル画像</p>
-            <button class="btn qr-button">QRコードを読み取る！</button>
-            <p>スタンプ</p>
-            <div class="stamp-container">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+            <button class="btn hj-stamp-qr-button" id="hj-stamp-qrreader">QRコードを読み取る</button>
+            <p class="hj-title">スタンプ一覧</p>
+            <div class="hj-stamp-container" id="hj-stamp-container">
+                <div>
+                    <img src="img/stamp_gray.png">
+                    <p>スタンプ①</p>
+                </div>
             </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="hijiri-modal" class="modal">
+            <div class="modal-content" id="hijiri-modal-content"></div>
+            <div class="modal-footer" id="hijiri-modal-footer"></div>
         </div>
 
         <!-- Scripts -->
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/storage-utils.js"></script>
         <script type="text/javascript" src="js/hijiri.js"></script>
+        <script type="text/javascript" src="js/jsQR.js"></script>
     </body>
 </html>
