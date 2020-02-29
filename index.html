@@ -8,17 +8,16 @@ ___  ___  ___        ___  ___  ________  ___    _______  ________    _______  __
     \|__|\|__|\|__|\|________|\|__|\|__|\|__|\|__| \|_______|\|_______| \|_______|\|_______|
 
     
-    Author:      hideki0403 (https://github.com/hideki0403)
-    GitHub Repo: https://github.com/hijiri2020/hijiri2020.github.io
-    PageHost:    https://github.io
+    Author:       hideki0403 (https://github.com/hideki0403)
+    GitHub Repo:  https://github.com/hijiri2020/hijiri2020.github.io
+    PageHost:     https://github.io
 -->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>hijiri 2020</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+        <script src="js/jquery-3.4.1.min.js"></script>
         <link type="text/css" href="css/animation.css" rel="stylesheet">
         <link type="text/css" href="css/style.css" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
@@ -63,15 +62,11 @@ ___  ___  ___        ___  ___  ________  ___    _______  ________    _______  __
             <p>タイムテーブル</p>
         </div>
         <div id="hijiri-stamp" class="container">
-            <p style="width: 100%;text-align: center;height: 70px;">スタンプラリータイトル画像</p>
+            <p class="hj-title">スタンプラリー</p>
             <button class="btn hj-stamp-qr-button" id="hj-stamp-qrreader">QRコードを読み取る</button>
             <p class="hj-title">スタンプ一覧</p>
-            <div class="hj-stamp-container" id="hj-stamp-container">
-                <div>
-                    <img src="img/stamp_gray.png">
-                    <p>スタンプ①</p>
-                </div>
-            </div>
+            <div class="hj-stamp-container" id="hj-stamp-container"></div>
+            <p class="hj-title">景品交換</p>
         </div>
 
         <!-- Modal -->
@@ -83,7 +78,8 @@ ___  ___  ___        ___  ___  ________  ___    _______  ________    _______  __
         <!-- Scripts -->
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/storage-utils.js"></script>
-        <script type="text/javascript" src="js/hijiri.js"></script>
         <script type="text/javascript" src="js/jsQR.js"></script>
+        <script type="text/javascript" src="js/mojs.js"></script>
+        <script type="text/javascript" src="js/hijiri.js"></script>
     </body>
 </html>

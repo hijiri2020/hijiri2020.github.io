@@ -1,15 +1,28 @@
 config = {
     set: function(name, val) {
-        var o = JSON.parse(localStorage.getItem('storage-utils'))
+        __checkStorage()
+        var o = JSON.parse(localStorage.getItem(__su_prefix + 'storage-utils'))
         o[name] = val
-        localStorage.setItem('storage-utils', JSON.stringify(o))
+        localStorage.setItem(__su_prefix + 'storage-utils', JSON.stringify(o))
     },
     get: function(name) {
-        o = JSON.parse(localStorage.getItem('storage-utils'))
+        __checkStorage()
+        o = JSON.parse(localStorage.getItem(__su_prefix + 'storage-utils'))
         return o[name]
+    },
+    prefix: function(f) {
+        __su_prefix = f + '-'
     }
 }
 
-if(localStorage.getItem('storage-utils') === null) {
-    localStorage.setItem('storage-utils', '{}')
+function __checkStorage() {
+    try {
+        __su_prefix
+    } catch {
+        __su_prefix = ''
+    }
+
+    if(localStorage.getItem(__su_prefix + 'storage-utils') === null) {
+        localStorage.setItem(__su_prefix + 'storage-utils', '{}')
+    }
 }
